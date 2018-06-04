@@ -1,4 +1,5 @@
 baseURL = "http://shora.ceit.aut.ac.ir/"
 languageCode = "en-us"
-title = "شورای صنفی دانشکده کامپیوتر دانشگاه صنعتی امیرکبیر"
+title = "شورای صنفی دانشکده کامپیوتر"
 theme="pure"
+shamsiDateFormat = "d MMM ماه yyyy"

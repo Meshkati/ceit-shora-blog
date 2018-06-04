@@ -1,0 +1,42 @@
+section.main-list {
+    margin-top: 3em;
+    padding-right: 0.5em; //TODO:Check it later
+}
+
+article.post-item {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+    header {
+        margin-bottom: 0.5em;
+        h1 {
+            color: @color-text-heading;
+            transition: all .1s linear;
+            a {
+                .default-link;
+                font-size: @text-list-heading;
+                font-weight: bold;
+                color: @color-text-heading;
+            }
+        }
+        span.meta {
+            time {
+                font-size: 1em;
+                color: @color-text-accent;
+            }
+        }
+    }
+    
+    .content {
+        color: @color-text-default;
+        font-size: @text-list-content;
+        text-align: justify;
+
+        a.read-more {
+            .high-link;
+            color: @color-text-heading;
+            font-style: italic;
+            font-size: @text-list-read-more;
+        }
+    }
+}

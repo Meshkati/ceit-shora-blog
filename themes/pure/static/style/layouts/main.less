@@ -1,8 +1,12 @@
+::selection {
+    background-color: @color-template-4;
+}
+
 body {
     background-color: @color-background-light;
     font-family: "WebParastoo", "Myriad Pro", "Roboto", "Helvetica-Neue", Arial, sans-serif;
     direction: rtl;
-
+    
     @media (max-width: 480px) {
         font-size: 12px;
     }
@@ -12,4 +16,45 @@ body {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.default-link {
+    text-decoration: none;
+    transition: all .1s linear;
+    
+    &:hover, &:active {
+        color: @color-accent;
+    }
+}
+
+.high-link(@color: @color-alternative, @background-color: @color-accent) {
+    text-decoration: none;
+    transition: all .1s linear;
+    border-radius: 0.3em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+
+    &:hover, &:active {
+        color: @color;
+        background-color: @background-color;
+    }
+}
+
+.tags {
+    font-size: 0.8em;
+    margin-right: 1em;
+    border-right: 0.2em solid @color-text-default;
+    padding-right: 1em;
+    a {
+        .high-link(@color-template-3, @color-template-2);
+        background: url(../images/icons/hashtag.png) no-repeat 100% center;
+        background-size: 1em 1em;
+        padding-right: 1.1em;
+        color: @color-text-default;
+    }
 }

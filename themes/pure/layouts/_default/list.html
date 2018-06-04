@@ -1,0 +1,31 @@
+<body>
+    {{ partial "navbar" . }}
+    
+    <section class="main-list">
+        <div class="container">
+            {{ range sort .Paginator.Pages }}
+            <article class="post-item">
+                <header>
+                    <span class="meta">
+                        <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
+                    </span>
+                    <h1>
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
+                        </a>
+                    </h1>
+                </header>
+                
+                <div class="content">
+                    {{ .Summary | plainify | safeHTML }}
+                    {{ if .Truncated }}
+                    <a class="read-more" href="{{ .Permalink }}">
+                        بیشتر بخوانید ...
+                    </a>
+                    {{ end }}
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+</body>

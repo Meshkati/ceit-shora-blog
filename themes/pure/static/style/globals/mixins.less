@@ -1,0 +1,24 @@
+.fontFace(@name, @file-name, @weight) {
+    @font-face {
+        font-family: @name;
+        src: url("fonts/@{file-name}.eot");
+        src: url("fonts/@{file-name}.eot?#iefix") format("embedded-opentype"),
+        url("fonts/@{file-name}.woff") format("woff"),
+        url("fonts/@{file-name}.ttf") format("truetype"),
+        url("fonts/@{file-name}.svg") format("svg");
+        font-weight: @weight
+    }
+}
+
+.linkEffect(@background-color, @foreground-color, @duration:.2s, @timing-function:ease-out) {
+    text-decoration: none;
+    padding: 3px 4px 0px;
+    border-radius: 40px;
+    transition: all .2s @timing-function;
+    .disableTapFeedback();
+    
+    &:hover, &:active {
+        background: @background-color;
+        color: @foreground-color;
+    }
+}

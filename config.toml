@@ -1,3 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://shora.ceit.aut.ac.ir/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "شورای صنفی دانشکده کامپیوتر دانشگاه صنعتی امیرکبیر"
+theme="pure"

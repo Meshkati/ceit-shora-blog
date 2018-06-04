@@ -1,0 +1,29 @@
+{{ partial "header.html" . }}
+
+<body>
+    {{ partial "navbar" . }}
+    <section class="main-view">
+        <div class="container">
+            <article class="post">
+                <header>
+                    <span class="meta">
+                        <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
+                        {{ if .Params.tags }}
+                        {{ partial "tags" .Params.tags }}
+                        {{ end }}
+                    </span>
+                    <h1>
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
+                        </a>
+                    </h1>
+                </header>
+                
+                <div class="content">
+                {{ .Content }}
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    {{ partial "footer" . }}

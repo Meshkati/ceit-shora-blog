@@ -8,6 +8,9 @@
                 <header>
                     <span class="meta">
                         <time datetime="{{ .Date }}" class="post-date">{{ .Params.shamsidate }}</time>
+                        {{ if .Params.tags }}
+                        {{ partial "tags" .Params.tags }}
+                        {{ end }}
                     </span>
                     <h1>
                         <a href="{{ .Permalink }}">

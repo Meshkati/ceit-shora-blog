@@ -11,19 +11,32 @@ footer#default-footer {
     bottom: 0;
     padding-bottom: 2em;
     div.socials {
-        margin-top: 1em;
+        margin-top: 1.5em;
         line-height: 1.7em;
-
+        h3 {
+            margin-bottom: 1em;
+        }
         a.page-item {
             .default-link;
             color: @color-text-default;
         }
     }
-    .github {
-        .default-link;
-        background: url(../images/icons/github.ico) no-repeat 100% center;
-        background-size: 1em 1em;
-        padding-right: 1.1em;
-        color: @color-text-default;
+    span.github {
+        border-right: 0.1em solid @color-text-default;
+        margin-right: 0.2em;
+        a {
+            margin-right: 0.2em;
+            .high-link;
+            background: url(../images/icons/github.ico) no-repeat 100% center;
+            background-size: 1em 1em;
+            padding-right: 1.1em;
+            color: @color-text-default;
+        }
+    }
+    
+    .signature {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        margin-top: 1em;
+        padding-top: 1.2em;
     }
 }

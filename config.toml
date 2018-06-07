@@ -4,3 +4,6 @@ title = "شورای صنفی دانشکده کامپیوتر"
 theme = "pure"
 shamsiDateFormat = "d MMM ماه yyyy"
 disqusShortname = "shora-ceit"
+
+[taxonomies]
+tag = "tags"

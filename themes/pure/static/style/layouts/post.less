@@ -33,6 +33,11 @@ article.post {
         text-align: justify;
         margin-top: 1em;
 
+        a {
+            .high-link(@color-background-light, @color-accent);
+            color: @color-accent;
+        }
+
         a.read-more {
             .high-link;
             color: @color-text-heading;
